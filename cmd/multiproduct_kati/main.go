@@ -37,6 +37,11 @@ import (
 	"android/soong/zip"
 )
 
+// We default to number of cpus.
+func detectNumJobs() int {
+        return runtime.NumCPU()
+}
+
 var numJobs = flag.Int("j", 0, "number of parallel jobs [0=autodetect]")
 
 var keepArtifacts = flag.Bool("keep", false, "keep archives of artifacts")
