@@ -1029,6 +1029,10 @@ func (c *config) NativeLineCoverage() bool {
 	return Bool(c.productVariables.NativeLineCoverage)
 }
 
+func (c *deviceConfig) SpecificCameraParametersLibrary() string {
+	return String(c.config.productVariables.Aosip.Specific_camera_parameter_library)
+}
+
 func (c *deviceConfig) NativeCoverageEnabled() bool {
 	return Bool(c.config.productVariables.Native_coverage) || Bool(c.config.productVariables.NativeLineCoverage)
 }
