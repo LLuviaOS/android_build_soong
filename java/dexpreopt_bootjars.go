@@ -308,6 +308,10 @@ func buildBootImage(ctx android.SingletonContext, image *bootImageConfig) *bootI
 		if i, j := getBootImageJar(ctx, image, module); i != -1 {
 			bootDexJars[i] = j
 		}
+		if m, ok := module.(interface{ BootJarProvider() bool }); !ok ||
+			!m.BootJarProvider() {
+			return
+		}
 	})
 
 	var missingDeps []string
