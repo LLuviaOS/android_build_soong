@@ -18,12 +18,16 @@ import (
 	"fmt"
 	"path/filepath"
 	"reflect"
+/*
 	"regexp"
+*/
 	"sort"
 	"strings"
 	"testing"
 
+/*
 	"github.com/google/blueprint/proptools"
+*/
 
 	"android/soong/android"
 	"android/soong/cc"
@@ -2100,6 +2104,7 @@ func TestAndroidAppImport_DefaultDevCert(t *testing.T) {
 	}
 }
 
+/*
 func TestAndroidAppImport_DpiVariants(t *testing.T) {
 	bp := `
 		android_app_import {
@@ -2177,6 +2182,7 @@ func TestAndroidAppImport_DpiVariants(t *testing.T) {
 		}
 	}
 }
+*/
 
 func TestAndroidAppImport_Filename(t *testing.T) {
 	ctx, config := testJava(t, `
@@ -2225,6 +2231,7 @@ func TestAndroidAppImport_Filename(t *testing.T) {
 	}
 }
 
+/*
 func TestAndroidAppImport_ArchVariants(t *testing.T) {
 	// The test config's target arch is ARM64.
 	testCases := []struct {
@@ -2287,6 +2294,7 @@ func TestAndroidAppImport_ArchVariants(t *testing.T) {
 		}
 	}
 }
+*/
 
 func TestAndroidTestImport(t *testing.T) {
 	ctx, config := testJava(t, `
@@ -2676,6 +2684,7 @@ func TestEmbedNotice(t *testing.T) {
 	}
 }
 
+/*
 func TestUncompressDex(t *testing.T) {
 	testCases := []struct {
 		name string
@@ -2761,6 +2770,7 @@ func TestUncompressDex(t *testing.T) {
 		})
 	}
 }
+*/
 
 func checkAapt2LinkFlag(t *testing.T, aapt2Flags, flagName, expectedValue string) {
 	if expectedValue != "" {
